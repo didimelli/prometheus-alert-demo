@@ -1,0 +1,6 @@
+groups:
+ - name: Temperature greater than 80
+   rules:
+   - alert: TemperatureGreaterThan80
+     expr: satellite_temperature > 80
+     for: 5s
