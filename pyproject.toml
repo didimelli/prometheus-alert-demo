@@ -2,22 +2,16 @@
 name = "prometheus-alert-demo"
 version = "0.1.0"
 description = "Add your description here"
-authors = [{ name = "didimelli", email = "davide.melli@dorbit.space" }]
-dependencies = ["fastapi>=0.111.0", "prometheus-client>=0.20.0"]
 readme = "README.md"
-requires-python = ">= 3.8"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.0",
+    "prometheus-client>=0.20.0",
+]
 
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-[tool.rye]
-virtual = true
-managed = true
-dev-dependencies = ["pre-commit>=3.7.1", "ruff>=0.4.9", "httpx>=0.27.0"]
-
-[tool.hatch.metadata]
-allow-direct-references = true
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/prometheus_alert_demo"]
+[tool.uv]
+dev-dependencies = [
+    "httpx>=0.27.2",
+    "pre-commit>=3.8.0",
+    "ruff>=0.6.5",
+]
